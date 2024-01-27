@@ -1,16 +1,14 @@
-let text = document.getElementById("myText")
-console.log(text.innerText);
-
-let usName = document.getElementById("usName")
-let usAge = document.getElementById('usAge')
+let Name = document.getElementById("usName")
+let Password = document.getElementById("usPassword")
+let Email = document.getElementById('usEmail')
 
 function getVal() {
-    fetch("http://localhost:3000/addName",{
+    fetch("/addName",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
         },
-        body: JSON.stringify({name: usName.value, age: usAge.value})
+        body: JSON.stringify({name: Name.value, password: Password.value, email: Email.value})
     })
-  
+
 }
