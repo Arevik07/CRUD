@@ -8,24 +8,35 @@
 </head>
 <body>
 
-<ul>
-    <% info.forEach(function(justOne) { %>
-    <li>
-        Id - <strong><%= justOne.theaterId %></strong> <br>
-        City - <strong><%= justOne.location.address.city %></strong> /
-        State - <strong><%= justOne.location.address.state %></strong> /
-        Zip code - <strong><%= justOne.location.address.zipcode %></strong> /
-        Street - <strong><%= justOne.location.address.street1 %></strong> <br> <br>
-    </li>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Update</td>
+            <td>Delete</td>
+
+        </tr>
+         <% info.forEach(function(justOne) { %>
+        <tr>
+            <td><%= justOne.name %></td>
+            <td><%= justOne.price %></td>
+            <td><a class="update" href="update/<%= justOne._id %>">Update</a></td>
+            <td><a class="delete" href="delete/<%= justOne._id %>">Delete</a></td>
+        </tr>
     <% }); %>
-    </ul>
-<!--
-    <form action="/addName" method="post"> -->
-        <input  id="usName" type="text" required name="name" placeholder="Please type your name"><br><br>
-        <input id="usPassword" type="password" name="password" placeholder="Please type your password"><br><br>
-        <input id="usEmail" type="email" name="email" placeholder="Please type your Email"><br><br>
-        <input type="submit" onclick="getVal()">
-    <!-- </form> -->
-  <script src="script.js"></script>
+    </table>
+
+    <form class="form" action="/addName" method="post">
+        <input class="Name" id="name" type="text" required name="name" placeholder="name" ><br><br>
+        <input class="price"  id="price" type="number" name="price" placeholder="price"  ><br><br>
+        <input class="image" id="image" type="text" name="image" placeholder="image" ><br><br>
+        <input class="des" id="des" type="text" name="des" placeholder="description" ><br><br>
+        <input class="uuld" id="uuld" type="number" name="uuld" placeholder="uuld" ><br><br>
+        <input class="loc" id="loc" type="text" name="loc" placeholder="location" ><br><br>
+        <!-- <input id="id" type="hidden" name="id" ><br><br> -->
+
+        <input type="submit">
+    </form>
+  <!-- <script src="script.js"></script> -->
 </body>
 </html>

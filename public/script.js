@@ -1,6 +1,8 @@
-let Name = document.getElementById("usName")
-let Password = document.getElementById("usPassword")
-let Email = document.getElementById('usEmail')
+let name = document.getElementById("name")
+let price = document.getElementById("price")
+let image = document.getElementById('image')
+
+
 
 function getVal() {
     fetch("/addName",{
@@ -8,7 +10,7 @@ function getVal() {
         headers:{
             "Content-Type":"application/json"
         },
-        body: JSON.stringify({name: Name.value, password: Password.value, email: Email.value})
+        body: JSON.stringify({name: name.value, price: price.value, image: image.value})
     })
 
 }

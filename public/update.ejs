@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    </table>
+    <form action="/updateData" method="post">
+        <input id="PrName" type="text" required name="name" placeholder="Name" value = "<%= obj.name %>"><br><br>
+        <input id="PrPrice" type="number" name="price" placeholder="Price" value = "<%= obj.price %>"><br><br>
+        <input id="PrImage" type="text" name="image" placeholder="Image"  value = "<%= obj.image %>"><br><br>
+        <input id="PrUULD" type="number" name="uuld" placeholder="UULD"  value = "<%= obj.uuld %>"><br><br>
+        <input id="PrLoc" type="text" name="loc" placeholder="Loc"  value = "<%= obj.loc %>"><br><br>
+        <input id="PrDes" type="text" name="description" placeholder="Description"  value = "<%= obj.des %>"><br><br>
+        <input  type="hidden" name="id"   value = "<%= obj._id %>"><br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
